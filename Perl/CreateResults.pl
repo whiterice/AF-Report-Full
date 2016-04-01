@@ -8,8 +8,10 @@ use Data::Dumper qw(Dumper);
 my $fh;
 my $signature = " ";
 my $PCERep = $ARGV[0];
+my $WorkDir   = $ARGV[1];
+my $ReportDir;
 
-
+print "Create Results: ", $PCERep, " ", $WorkDir, "\n",;
 
 #PCERep Signature
 if (($PCERep eq "Vince")||($PCERep eq "vince"))
@@ -20,7 +22,7 @@ $signature = "
 \\begin{multicols}{2}
 \\centering
 \\includegraphics[height=0.5in, keepaspectratio=true]{../Images/Roman_signature.jpg} \\\\
-Roman Bulla, P. Eng. \\Power Systems Engineer \\\\
+Roman Bulla, P. Eng. \\\\Power Systems Engineer \\\\
 \\includegraphics[height=0.5in, keepaspectratio=true]{../Images/Vince_signature.jpg} \\\\
 Vince Klingenberger \\\\Electrical Engineering Technologist \\\\
 \\end{multicols}
@@ -36,7 +38,7 @@ $signature = "
 \\begin{multicols}{2}
 \\centering
 \\includegraphics[height=0.5in, keepaspectratio=true]{../Images/Roman_signature.jpg} \\\\
-Roman Bulla, P. Eng. \\Power Systems Engineer \\\\
+Roman Bulla, P. Eng. \\\\Power Systems Engineer \\\\
 \\includegraphics[height=0.5in, keepaspectratio=true]{../Images/Scott_signature.jpg} \\\\
 Scott Vermeire \\\\Engineering Intern \\\\
 \\end{multicols}
@@ -48,7 +50,7 @@ else
 $signature = "
 \\beging{flushleft}
 \\includegraphics[height=0.5in, keepaspectratio=true]{../Images/Roman_signature.jpg} \\\\
-Roman Bulla, P. Eng. \\Power Systems Engineer \\\\
+Roman Bulla, P. Eng. \\\\Power Systems Engineer \\\\
 \\end{flushleft}
 %\\end{comment}";
 }
@@ -126,4 +128,4 @@ END_OF_REPORT
 
 close $fh;
 
-print "Results Page for LaTex Arc Flash Report Generated"
+print "Results Page for LaTex Arc Flash Report Generated\n"

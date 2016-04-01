@@ -5,10 +5,13 @@ use warnings;
 
 use Data::Dumper qw(Dumper);
 
-my $Customer = $ARGV[0];
-my $Building = $ARGV[1];
-my $Address  = $ARGV[2];
-my $JobNum   = $ARGV[3];
+my $JobNum = $ARGV[0];
+my $Customer = $ARGV[1];
+my $Building  = $ARGV[2];
+my $Address   = $ARGV[3];
+my $WorkDir   = $ARGV[4];
+
+print "Create AF: ", $JobNum, " ", $Customer, " ", $Building, " ", $Address, " ", $WorkDir, "\n",;
 
 #Latex
 open(my $fh, '>', 'Arc Flash.tex');
@@ -41,7 +44,7 @@ print $fh <<"END_OF_REPORT";
 %Constants
 \\newcommand{\\DocTitle}{ARC FLASH HAZARD ANALYSIS}
 \\newcommand{\\Customer}{$Customer}
-\\newcommand{\\Building}{$Building}
+\\newcommand{\\Target}{$Building}
 \\newcommand{\\Address}{$Address}
 \\newcommand{\\JobNum}{$JobNum}
 
@@ -90,7 +93,7 @@ Tel: (519) 474-1175\\\\
 \\begin{document}
 
 \\pagenumbering{Alph}
-\\include{CoverPage}
+\\input{../CoverPage.tex}
 \\pagenumbering{arabic}
 \\pagestyle{fancy}
 
@@ -112,4 +115,4 @@ END_OF_REPORT
 
 close $fh;
 
-print "Main LaTex Arc Flash file Generated"
+print "Main LaTex Arc Flash file Generated\n"
