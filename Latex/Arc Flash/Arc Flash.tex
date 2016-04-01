@@ -1,15 +1,3 @@
-#Perl
-#!/usr/bin/perl
-use strict;
-use warnings;
-
-my $Customer = "Fanshawe College";
-my $Building = "Main Campus";
-my $Address  = "1001 Fanshawe College Blvd";
-my $JobNum   = "S2940_01";
-
-#Latex
-print <<'END_OF_REPORT';
 %Arc Flash Report
 
 \documentclass{article}
@@ -24,6 +12,8 @@ print <<'END_OF_REPORT';
 \usepackage{fmtcount}
 \usepackage[utf8]{inputenc}
 \usepackage{hyperref}
+\usepackage{comment}
+\usepackage{enumitem}
 
 %Prevents Tables from being repositioned
 \usepackage{float}
@@ -35,12 +25,14 @@ print <<'END_OF_REPORT';
 %Bottom space
 \newcommand{\Botrule}{\rule[-1.2ex]{0pt}{0pt}}
 
+
+
 %Constants
 \newcommand{\DocTitle}{ARC FLASH HAZARD ANALYSIS}
-\newcommand{\Customer}{$Customer}
-\newcommand{\Building}{$Building}
-\newcommand{\Address}{$Address}
-\newcommand{\JobNum}{$JobNum}
+\newcommand{\Customer}{City Of London}
+\newcommand{\Target}{Junior Achievement Building}
+\newcommand{\Address}{15 Wharncliffe Road}
+\newcommand{\JobNum}{S2948\_56}
 
 
 %hyperlinks
@@ -68,7 +60,7 @@ urlcolor=blue}           								% color of external links
 \fancyhead[R]{\leftmark} % 1. sectionname
 \fancyfoot[C]{\thepage}
 \fancyfoot[L]{
-PowerCore Engineering\\
+PowerCore Engineering Ltd.\\
 London, Ontario, Canada\\
 Tel: (519) 474-1175\\
 \url{www.powercore.ca}}
@@ -86,8 +78,11 @@ Tel: (519) 474-1175\\
 
 \begin{document}
 
+%Setlists
+\setlist[enumerate]{itemsep=0mm}
+
 \pagenumbering{Alph}
-\include{CoverPage}
+\input{../CoverPage.tex}
 \pagenumbering{arabic}
 \pagestyle{fancy}
 
@@ -103,4 +98,3 @@ Tel: (519) 474-1175\\
 \include{Bibliography}
 
 \end{document}
-END_OF_REPORT
