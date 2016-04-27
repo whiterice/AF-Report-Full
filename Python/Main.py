@@ -40,7 +40,7 @@ def main():
     AF_Path = '{!s}/{!s}'.format(Report_Path, "Arc Flash")
     os.chdir(AF_Path)
     subprocess.call(["perl", "/c/Users/Scott/Dropbox/Scripts/Python/AF-Report-full/Perl/CreateAF.pl", args.Job_Num, args.Customer_Comp, args.Customer_Build, args.Customer_Add, args.Working_Dir])
-    subprocess.call(["perl", "/c/Users/Scott/Dropbox/Scripts/Python/AF-Report-full/Perl/CreateResults.pl", args.PCE_Rep, args.Working_Dir])
+    subprocess.call(["perl", "/c/Users/Scott/Dropbox/Scripts/Python/AF-Report-full/Perl/CreateResults.pl", args.PCE_Rep, args.Working_Dir, AF_Path])
     
 
     

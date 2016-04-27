@@ -9,9 +9,17 @@ my $fh;
 my $signature = " ";
 my $PCERep = $ARGV[0];
 my $WorkDir   = $ARGV[1];
-my $ReportDir;
+my $ReportDir = $ARGV[2];
+
 
 print "Create Results: ", $PCERep, " ", $WorkDir, "\n",;
+
+#Results
+chdir $WorkDir;
+my $input_file = "Concerns.txt";
+open( my $input_fh, "<", $input_file ) || die "Can't open $input_file: $!";
+my $AF_Concerns = join('', <$input_fh>);
+#print $AF_Concerns;
 
 #PCERep Signature
 if (($PCERep eq "Vince")||($PCERep eq "vince"))
@@ -56,6 +64,7 @@ Roman Bulla, P. Eng. \\\\Power Systems Engineer \\\\
 }
 
 #Latex
+chdir $ReportDir;
 open($fh, '>', 'Results.tex');
 
 print $fh <<"END_OF_REPORT";
@@ -70,9 +79,7 @@ print $fh <<"END_OF_REPORT";
 
 The Arc Flash Hazard Evaluation Study has shown that:
 \\begin{enumerate}
-\\item WDMB01 is Arc Hazard Class 4
-\\item WDMB02-SW is Arc Hazard Class 4
-\\item WDMB03-SW is Arc Hazard Class 4
+$AF_Concerns
 
 
 \\end{enumerate}
