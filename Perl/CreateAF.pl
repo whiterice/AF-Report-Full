@@ -3,6 +3,8 @@
 use strict;
 use warnings;
 
+my $StudyTitle = " ";
+
 use Data::Dumper qw(Dumper);
 
 my $JobNum = $ARGV[0];
@@ -10,9 +12,24 @@ my $Customer = $ARGV[1];
 my $Building  = $ARGV[2];
 my $Address   = $ARGV[3];
 my $WorkDir   = $ARGV[4];
+my $ReportType   = $ARGV[5];
 
 print "Create AF: ", $JobNum, " ", $Customer, " ", $Building, " ", $Address, " ", $WorkDir, "\n",;
 
+#Title Selection
+if ($ReportType eq "AF")
+{
+	$StudyTitle = "ARC FLASH HAZARD ANALYSIS";
+}
+elsif ($ReportType eq "FULL")
+{
+	$StudyTitle = "ARC FLASH, SHORT CIRCUIT AND PROTECTIVE DEVICE COORDINATION STUDY";
+}
+else
+{
+	$StudyTitle = "ARC FLASH HAZARD ANALYSIS";
+}
+	
 #Latex
 open(my $fh, '>', 'Arc Flash.tex');
 
@@ -42,7 +59,7 @@ print $fh <<"END_OF_REPORT";
 \\newcommand{\\Botrule}{\\rule[-1.2ex]{0pt}{0pt}}
 
 %Constants
-\\newcommand{\\DocTitle}{ARC FLASH HAZARD ANALYSIS}
+\\newcommand{\\DocTitle}{$StudyTitle}
 \\newcommand{\\Customer}{$Customer}
 \\newcommand{\\Target}{$Building}
 \\newcommand{\\Address}{$Address}

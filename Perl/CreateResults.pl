@@ -10,7 +10,7 @@ my $signature = " ";
 my $PCERep = $ARGV[0];
 my $WorkDir   = $ARGV[1];
 my $ReportDir = $ARGV[2];
-
+my $ReportType   = $ARGV[3];
 
 print "Create Results: ", $PCERep, " ", $WorkDir, "\n",;
 
