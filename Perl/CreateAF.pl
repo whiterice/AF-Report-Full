@@ -4,17 +4,34 @@ use strict;
 use warnings;
 
 my $StudyTitle = " ";
-
+my $PCERepName = " ";
 use Data::Dumper qw(Dumper);
 
-my $JobNum = $ARGV[0];
-my $Customer = $ARGV[1];
-my $Building  = $ARGV[2];
-my $Address   = $ARGV[3];
-my $WorkDir   = $ARGV[4];
-my $ReportType   = $ARGV[5];
+my $PCERep = $ARGV[0];
+my $JobNum = $ARGV[1];
+my $Customer = $ARGV[2];
+my $Building  = $ARGV[3];
+my $Address   = $ARGV[4];
+my $WorkDir   = $ARGV[5];
+my $ReportType   = $ARGV[6];
 
-print "Create AF: ", $JobNum, " ", $Customer, " ", $Building, " ", $Address, " ", $WorkDir, "\n",;
+print "Create AF: ", $PCERep, $JobNum, " ", $Customer, " ", $Building, " ", $Address, " ", $WorkDir, "\n",;
+
+#PCERep Signature
+if (($PCERep eq "Vince")||($PCERep eq "vince"))
+{
+$PCERepName = "Vince Klingenberger";
+
+}
+elsif (($PCERep eq "Scott")||($PCERep eq "scott"))
+{
+$PCERepName = "Scott Vermeire, B.Eng, EIT";
+	
+}
+else
+{
+$PCERepName = "";
+}
 
 #Title Selection
 if ($ReportType eq "AF")
@@ -64,7 +81,7 @@ print $fh <<"END_OF_REPORT";
 \\newcommand{\\Target}{$Building}
 \\newcommand{\\Address}{$Address}
 \\newcommand{\\JobNum}{$JobNum}
-
+\\newcommand{\\PCERep}{$PCERepName}
 
 %hyperlinks
 \\hypersetup{
