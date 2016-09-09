@@ -40,7 +40,7 @@ if ($ReportType eq "AF")
 }
 elsif ($ReportType eq "FULL")
 {
-	$StudyTitle = "ARC FLASH HAZARD ANALYSIS";
+	$StudyTitle = "SHORT CIRCUIT AND PROTECTIVE DEVICE COORDINATION STUDY";
 }
 else
 {
@@ -48,9 +48,11 @@ else
 }
 	
 #Latex
-open(my $fh, '>', 'Arc Flash.tex');
+open(my $fh, '>', 'PDC.tex');
 
 print $fh <<"END_OF_REPORT";
+
+%PDC Report
 
 \\documentclass{article}
 \\usepackage{graphicx}
@@ -64,6 +66,8 @@ print $fh <<"END_OF_REPORT";
 \\usepackage{fmtcount}
 \\usepackage[utf8]{inputenc}
 \\usepackage{hyperref}
+\\usepackage{comment}
+\\usepackage{enumitem}
 
 %Prevents Tables from being repositioned
 \\usepackage{float}
@@ -90,15 +94,15 @@ pdfmenubar=true,        								% show Acrobat’s menu?
 pdffitwindow=false,     								% window fit to page when opened
 pdfstartview={FitH},    								% fits the width of the page to the window
 pdftitle={\\DocTitle},    								% title
-pdfauthor={PowerCore Engineering},    					% author
+pdfauthor={PowerCore Engineering},    	% author
 pdfsubject={Report},   									% subject of the document
-pdfcreator={PowerCore Engineering},   					% creator of the document
-pdfproducer={PowerCore Engineering}, 					% producer of the document
+pdfcreator={PowerCore Engineering},   	% creator of the document
+pdfproducer={PowerCore Engineering}, 		% producer of the document
 pdfnewwindow=true,      								% links in new window
 colorlinks=true,       									% false: boxed links; true: colored links
-linkcolor=black,          								% color of internal links (change box color with linkbordercolor)
+linkcolor=black,          							% color of internal links (change box color with linkbordercolor)
 citecolor=blue,        									% color of links to bibliography
-filecolor=blue,      									% color of file links
+filecolor=blue,      										% color of file links
 urlcolor=blue}           								% color of external links
 
 
@@ -108,14 +112,14 @@ urlcolor=blue}           								% color of external links
 \\fancyhead[R]{\\leftmark} % 1. sectionname
 \\fancyfoot[C]{\\thepage}
 \\fancyfoot[L]{
-PowerCore Engineering\\\\
+PowerCore Engineering Ltd.\\\\
 London, Ontario, Canada\\\\
 Tel: (519) 474-1175\\\\
 \\url{www.powercore.ca}}
 \\cfoot{ }
 
 \\fancyfoot[R]{
-\\DocTitle \\\\ \\vspace{12pt}  -\thepage -}
+\\DocTitle \\\\ \\vspace{12pt}  -\\thepage -}
 \\fancypagestyle{plain}{%
   \\fancyhf{}%
   \\renewcommand{\\headrulewidth}{0pt}%
@@ -125,6 +129,9 @@ Tel: (519) 474-1175\\\\
 }
 
 \\begin{document}
+
+%Setlists
+\\setlist[enumerate]{itemsep=0mm}
 
 \\pagenumbering{Alph}
 \\input{../CoverPage.tex}
@@ -137,13 +144,15 @@ Tel: (519) 474-1175\\\\
 
 \\include{Introduction}
 \\include{Results}
-\\include{Objectives}
-\\include{Procedures}
-\\include{Observations}
-\\include{Bibliography}
+\\include{SCCObjectives}
+\\include{SCCObservations}
+\\include{PDCObjectives}
+\\include{PDCProcedures}
+\\include{PDCObservations}
+
+%\\include{Bibliography}
 
 \\end{document}
-
 END_OF_REPORT
 
 

@@ -1,0 +1,37 @@
+%Objectives
+\section{Short Circuit Study Procedures and Objectives}
+\label{af:scco}
+
+\noindent Short Circuit Study determined the maximum duty that all system protective devices, transformers, and interconnections would be subjected to in the event
+of a three-phase fault condition. The fault study also provides necessary information required to determine protective device settings.\\
+
+\noindent Short Circuit sources include the Utility Company and all large AC motors. Small motors have a very high Transient Impedance and will not contribute significant current into a fault. DC machines are not included.\\
+
+\noindent The Short Circuit Study provides the following Tables:
+\begin{itemize}
+	\item Branch impedance tabulation
+	\item Fault current tabulation - first half cycle (momentary)
+	\item Fault current tabulation - 3 to 8 cycles (interrupting)
+\end{itemize}
+
+\vspace{5mm}
+
+\noindent The following definitions are used in the short circuit study.
+\begin{itemize}
+	\item \emph{BRANCH} is a line, cable, or transformer interconnecting two buses. Each branch is assigned a unique number from 2 to 999 consecutively. 
+	\item \emph{BUS} is the junction point for one or more impedance elements such as generators, motors, transformers, cables etc. Each bus is assigned a unique
+number from 1 to 999. Bus zero is the infinite bus.
+	\item \emph{BUS LABEL} is an identification name assigned to each bus by the user for easy reference.
+	\item \emph{FIRST HALF CYCLE R(pu) and X(pu)} is the per unit resistance and reactance on a 100 MVA Base for the time interval 1/2 to 1 cycles after fault inception.
+	\item \emph{3-8 CYCLE R(pu) and X(pu)} is the per unit resistance and reactance on a 100 MVA base for the time interval 3-8 cycles after fault inception.
+	\item \emph{MOMENTARY FAULT CURRENT} is the total RMS current at the corresponding bus location measured at 1/2 cycle after a fault occurs.
+
+	\item \emph{INTERRUPTING FAULT CURRENT} is the total RMS current at the corresponding bus location measured 3-8 cycles after a fault occurs. This is the time period that most medium and high voltage devices will interrupt a fault.
+	\item \emph{X/R RATIO} is the reactance to resistance ratio at the fault location corresponding to either the momentary or interrupting period. This value is calculated by the EDSA digital short circuit program and is used to determine the multiplying factor as described in IEEE standard 141-1976.
+	\item \emph{MULT} is a multiplying factor which is defined as the ratio between asymmetrical and symmetrical current corresponding to either the momentary or interrupting
+period. This multiplying factor is based on the above X/R ratio and is described in IEEE standard 141-1976.
+	\item \emph{SYM AMPS} is the symmetrical current at the faulted bus location corresponding
+to either the momentary or interrupting period. This value is calculated by the
+EDSA digital short circuit program.
+	\item \emph{ASYM AMPS} is the asymmetrical current and is obtained by multiplying the symmetrical current by the multiplying factor as defined above. The asymmetrical amps during the momentary period is used to determine the interrupting duty for low voltage breakers. The asymmetrical amps during the interrupting period is used to determine the interrupting duty for medium and high voltage circuit breakers.
+\end{itemize}
