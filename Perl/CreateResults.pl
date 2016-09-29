@@ -118,6 +118,9 @@ Based on the Arc Flash evaluation Study performed, we recommend the following:
 \\item	Provide PPE of appropriate level to all personnel that will be operating electrical equipment.
 
 \\item	We recommend that a formal written Electrical Equipment Operation Procedures Manual as well as an Arc Flash Hazard Program that meets the regulations noted in CSA Z462-15 and IEEE-1584, be developed and implemented.
+
+\\item All modifications and recommendations in the enclosed \textbf{Recommended Changes Summary} list should be reviewed and implemented as necessary.
+
 \\end{itemize}
 \\vspace{10mm}
 \\noindent Thank you for this opportunity to be of service to you.  If you have any questions regarding the recommendations in this report or any other matter, please contact our London Engineering Services office at (519) 474-1175. \newline

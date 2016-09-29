@@ -40,7 +40,7 @@ if ($ReportType eq "AF")
 }
 elsif ($ReportType eq "FULL")
 {
-	$StudyTitle = "SHORT CIRCUIT AND PROTECTIVE DEVICE COORDINATION STUDY";
+	$StudyTitle = "SHORT CIRCUIT \\& PROTECTIVE DEVICE COORDINATION \\\\ STUDY";
 }
 else
 {

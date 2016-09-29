@@ -115,7 +115,7 @@ Tel: (519) 474-1175\\\\
 \\cfoot{ }
 
 \\fancyfoot[R]{
-\\DocTitle \\\\ \\vspace{12pt}  -\thepage -}
+\\DocTitle \\\\ \\vspace{12pt}  -\\thepage -}
 \\fancypagestyle{plain}{%
   \\fancyhf{}%
   \\renewcommand{\\headrulewidth}{0pt}%
