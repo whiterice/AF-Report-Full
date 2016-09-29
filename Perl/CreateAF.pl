@@ -140,6 +140,7 @@ Tel: (519) 474-1175\\\\
 \\include{Objectives}
 \\include{Procedures}
 \\include{Observations}
+\\include{Modifications}
 \\include{Bibliography}
 
 \\end{document}
