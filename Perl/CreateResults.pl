@@ -98,12 +98,12 @@ The following issues have been encountered and are of note:
 
 \\item Please note that the operation of fused switches or starters with cover on or enclosure doors closed does not require arc flash rated PPE Hazard, based on CSA Z462.
 
-\\item Section 4.3.5.1 of the CSA Z462-2012 standard states. "An arc flash hazard analysis shall determine the (a) arc flash boundary; (b) incident energy at the working distance; and (c) PPE that personnel within the arc flash boundary shall use.\cite{CSA}
+\\item Section 4.3.5.1 of the CSA Z462-2012 standard states. "An arc flash hazard analysis shall determine the (a) arc flash boundary; (b) incident energy at the working distance; and (c) PPE that personnel within the arc flash boundary shall use.\\cite{CSA}
 
-\\item The analysis shall be updated when a major modification or renovation takes place. It shall be reviewed periodically, not to exceed 5 years, to account for changes in the electrical distribution system that could affect the results of the analysis.\cite{CSA}
+\\item The analysis shall be updated when a major modification or renovation takes place. It shall be reviewed periodically, not to exceed 5 years, to account for changes in the electrical distribution system that could affect the results of the analysis.\\cite{CSA}
 
 
-\\item The analysis shall take into consideration the design of the overcurrent protective device and its opening time, including its condition of maintenance. Incident energy need not be determined if the requirements of Clauses 4.3.7.3.15 and 4.3.7.3.16 are met."\cite{CSA}
+\\item The analysis shall take into consideration the design of the overcurrent protective device and its opening time, including its condition of maintenance. Incident energy need not be determined if the requirements of Clauses 4.3.7.3.15 and 4.3.7.3.16 are met."\\cite{CSA}
  
 \\item\\textbf{Equipment below 240 V need not be considered (for Arc Flash Hazard Analysis) unless it involves at least one 125 kVA or larger low impedance transformer in its immediate power supply.}\\cite{IEEE}	 
 \\end{itemize}
@@ -123,7 +123,7 @@ Based on the Arc Flash evaluation Study performed, we recommend the following:
 
 \\end{itemize}
 \\vspace{10mm}
-\\noindent Thank you for this opportunity to be of service to you.  If you have any questions regarding the recommendations in this report or any other matter, please contact our London Engineering Services office at (519) 474-1175. \newline
+\\noindent Thank you for this opportunity to be of service to you.  If you have any questions regarding the recommendations in this report or any other matter, please contact our London Engineering Services office at (519) 474-1175. \\newline
 \\vspace{5mm}
 \\\\
 \\noindent Sincerely,\\newline
