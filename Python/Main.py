@@ -6,7 +6,7 @@ import xlwt
 import datetime as DT
 from xlrd import open_workbook
 import argparse
-import CopyFiles
+import CopyFilesComplete
 import subprocess
 
 sys.path.insert(0, './EDSA')
@@ -39,7 +39,7 @@ def main():
     SCCReport_Path = '{!s}{!s}'.format(args.Working_Dir, SCCReportFolderName)
 
     if args.Report_Type == 'FULL':
-        CopyFiles.copyanything('d:\svermeire\Dropbox\Dropbox\Scripts\Python\AF-Report-full\Latex\ArcFlash', AFReport_Path)
+        CopyFilesComplete.copyanything('d:\svermeire\Dropbox\Dropbox\Scripts\Python\AF-Report-full\Latex\ArcFlash', AFReport_Path)
         print '\n', AFReportFolderName, ' Generated', '\n'
         AF_Path = '{!s}/{!s}'.format(AFReport_Path, "Arc Flash")
         os.chdir(AF_Path)
@@ -47,7 +47,7 @@ def main():
         subprocess.call(["perl", "/d/svermeire/Dropbox/Dropbox/Scripts/Python/AF-Report-full/Perl/CreateResults.pl", args.PCE_Rep, args.Working_Dir, AF_Path, args.Report_Type])
 		
 		
-        CopyFiles.copyanything('d:\svermeire\Dropbox\Dropbox\Scripts\Python\AF-Report-full\Latex\PDC', PDCReport_Path)
+        CopyFilesComplete.copyanything('d:\svermeire\Dropbox\Dropbox\Scripts\Python\AF-Report-full\Latex\PDC', PDCReport_Path)
 	print '\n', PDCReportFolderName, ' Generated', '\n'
         #Generate PDC Latex Report
         PDC_Path = '{!s}/{!s}'.format(PDCReport_Path, "PDC")
@@ -55,7 +55,7 @@ def main():
         subprocess.call(["perl", "/d/svermeire/Dropbox/Dropbox/Scripts/Python/AF-Report-full/Perl/CreatePDC.pl", args.PCE_Rep, args.Job_Num, args.Customer_Comp, args.Customer_Build, args.Customer_Add, args.Working_Dir, args.Report_Type])
 
     elif args.Report_Type == 'PDC':
-        CopyFiles.copyanything('d:\svermeire\Dropbox\Dropbox\Scripts\Python\AF-Report-full\Latex\PDC', PDCReport_Path)
+        CopyFilesComplete.copyanything('d:\svermeire\Dropbox\Dropbox\Scripts\Python\AF-Report-full\Latex\PDC', PDCReport_Path)
 	print '\n', PDCReportFolderName, ' Generated', '\n'
         #Generate PDC Latex Report
         PDC_Path = '{!s}/{!s}'.format(PDCReport_Path, "PDC")
@@ -64,7 +64,7 @@ def main():
 
 
     elif args.Report_Type == 'SCC':
-        CopyFiles.copyanything('d:\svermeire\Dropbox\Dropbox\Scripts\Python\AF-Report-full\Latex\SCC', SCCReport_Path)
+        CopyFilesComplete.copyanything('d:\svermeire\Dropbox\Dropbox\Scripts\Python\AF-Report-full\Latex\SCC', SCCReport_Path)
 	print '\n', SCCReportFolderName, ' Generated', '\n'
         #Generate SCC Latex Report
         SCC_Path = '{!s}/{!s}'.format(SCCReport_Path, "SCC")
@@ -72,7 +72,7 @@ def main():
         subprocess.call(["perl", "/d/svermeire/Dropbox/Dropbox/Scripts/Python/AF-Report-full/Perl/CreateSCC.pl", args.PCE_Rep, args.Job_Num, args.Customer_Comp, args.Customer_Build, args.Customer_Add, args.Working_Dir, args.Report_Type])
 
     else:
-        CopyFiles.copyanything('d:\svermeire\Dropbox\Dropbox\Scripts\Python\AF-Report-full\Latex\ArcFlash', AFReport_Path)
+        CopyFilesComplete.copyanything('d:\svermeire\Dropbox\Dropbox\Scripts\Python\AF-Report-full\Latex\ArcFlash', AFReport_Path)
         print '\n', AFReportFolderName, ' Generated', '\n'
         #Generate AF Latex Report
         AF_Path = '{!s}/{!s}'.format(AFReport_Path, "Arc Flash")
