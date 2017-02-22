@@ -39,46 +39,46 @@ def main():
     SCCReport_Path = '{!s}{!s}'.format(args.Working_Dir, SCCReportFolderName)
 
     if args.Report_Type == 'FULL':
-        CopyFilesComplete.copyanything('d:\svermeire\Dropbox\Dropbox\Scripts\Python\AF-Report-full\Latex\ArcFlash', AFReport_Path)
+        CopyFilesComplete.copyanything('z:\Source-Code\ArcFlash\AF-Report-full\Latex\ArcFlash', AFReport_Path)
         print '\n', AFReportFolderName, ' Generated', '\n'
         AF_Path = '{!s}/{!s}'.format(AFReport_Path, "Arc Flash")
         os.chdir(AF_Path)
-        subprocess.call(["perl", "/d/svermeire/Dropbox/Dropbox/Scripts/Python/AF-Report-full/Perl/CreateAF.pl", args.PCE_Rep, args.Job_Num, args.Customer_Comp, args.Customer_Build, args.Customer_Add, args.Working_Dir, args.Report_Type])
-        subprocess.call(["perl", "/d/svermeire/Dropbox/Dropbox/Scripts/Python/AF-Report-full/Perl/CreateResults.pl", args.PCE_Rep, args.Working_Dir, AF_Path, args.Report_Type])
+        subprocess.call(["perl", "/z/Source-Code/ArcFlash/AF-Report-full/Perl/CreateAF.pl", args.PCE_Rep, args.Job_Num, args.Customer_Comp, args.Customer_Build, args.Customer_Add, args.Working_Dir, args.Report_Type])
+        subprocess.call(["perl", "/z/Source-Code/ArcFlash/AF-Report-full/Perl/CreateResults.pl", args.PCE_Rep, args.Working_Dir, AF_Path, args.Report_Type])
 		
 		
-        CopyFilesComplete.copyanything('d:\svermeire\Dropbox\Dropbox\Scripts\Python\AF-Report-full\Latex\PDC', PDCReport_Path)
+        CopyFilesComplete.copyanything('z:\Source-Code\ArcFlash\AF-Report-full\Latex\PDC', PDCReport_Path)
 	print '\n', PDCReportFolderName, ' Generated', '\n'
         #Generate PDC Latex Report
         PDC_Path = '{!s}/{!s}'.format(PDCReport_Path, "PDC")
         os.chdir(PDC_Path)
-        subprocess.call(["perl", "/d/svermeire/Dropbox/Dropbox/Scripts/Python/AF-Report-full/Perl/CreatePDC.pl", args.PCE_Rep, args.Job_Num, args.Customer_Comp, args.Customer_Build, args.Customer_Add, args.Working_Dir, args.Report_Type])
+        subprocess.call(["perl", "/z/Source-Code/ArcFlash/AF-Report-full/Perl/CreatePDC.pl", args.PCE_Rep, args.Job_Num, args.Customer_Comp, args.Customer_Build, args.Customer_Add, args.Working_Dir, args.Report_Type])
 
     elif args.Report_Type == 'PDC':
-        CopyFilesComplete.copyanything('d:\svermeire\Dropbox\Dropbox\Scripts\Python\AF-Report-full\Latex\PDC', PDCReport_Path)
+        CopyFilesComplete.copyanything('z:\Source-Code\ArcFlash\AF-Report-full\Latex\PDC', PDCReport_Path)
 	print '\n', PDCReportFolderName, ' Generated', '\n'
         #Generate PDC Latex Report
         PDC_Path = '{!s}/{!s}'.format(PDCReport_Path, "PDC")
         os.chdir(PDC_Path)
-        subprocess.call(["perl", "/d/svermeire/Dropbox/Dropbox/Scripts/Python/AF-Report-full/Perl/CreatePDC.pl", args.PCE_Rep, args.Job_Num, args.Customer_Comp, args.Customer_Build, args.Customer_Add, args.Working_Dir, args.Report_Type])
+        subprocess.call(["perl", "/z/Source-Code/ArcFlash/AF-Report-full/Perl/CreatePDC.pl", args.PCE_Rep, args.Job_Num, args.Customer_Comp, args.Customer_Build, args.Customer_Add, args.Working_Dir, args.Report_Type])
 
 
     elif args.Report_Type == 'SCC':
-        CopyFilesComplete.copyanything('d:\svermeire\Dropbox\Dropbox\Scripts\Python\AF-Report-full\Latex\SCC', SCCReport_Path)
+        CopyFilesComplete.copyanything('z:\Source-Code\ArcFlash\AF-Report-full\Latex\SCC', SCCReport_Path)
 	print '\n', SCCReportFolderName, ' Generated', '\n'
         #Generate SCC Latex Report
         SCC_Path = '{!s}/{!s}'.format(SCCReport_Path, "SCC")
         os.chdir(SCC_Path)
-        subprocess.call(["perl", "/d/svermeire/Dropbox/Dropbox/Scripts/Python/AF-Report-full/Perl/CreateSCC.pl", args.PCE_Rep, args.Job_Num, args.Customer_Comp, args.Customer_Build, args.Customer_Add, args.Working_Dir, args.Report_Type])
+        subprocess.call(["perl", "/z/Source-Code/ArcFlash/AF-Report-full/Perl/CreateSCC.pl", args.PCE_Rep, args.Job_Num, args.Customer_Comp, args.Customer_Build, args.Customer_Add, args.Working_Dir, args.Report_Type])
 
     else:
-        CopyFilesComplete.copyanything('d:\svermeire\Dropbox\Dropbox\Scripts\Python\AF-Report-full\Latex\ArcFlash', AFReport_Path)
+        CopyFilesComplete.copyanything('z:\Source-Code\ArcFlash\AF-Report-full\Latex\ArcFlash', AFReport_Path)
         print '\n', AFReportFolderName, ' Generated', '\n'
         #Generate AF Latex Report
         AF_Path = '{!s}/{!s}'.format(AFReport_Path, "Arc Flash")
         os.chdir(AF_Path)
-        subprocess.call(["perl", "/d/svermeire/Dropbox/Dropbox/Scripts/Python/AF-Report-full/Perl/CreateAF.pl", args.PCE_Rep, args.Job_Num, args.Customer_Comp, args.Customer_Build, args.Customer_Add, args.Working_Dir, args.Report_Type])
-        subprocess.call(["perl", "/d/svermeire/Dropbox/Dropbox/Scripts/Python/AF-Report-full/Perl/CreateResults.pl", args.PCE_Rep, args.Working_Dir, AF_Path, args.Report_Type])
+        subprocess.call(["perl", "/z/Source-Code/ArcFlash/AF-Report-full/Perl/CreateAF.pl", args.PCE_Rep, args.Job_Num, args.Customer_Comp, args.Customer_Build, args.Customer_Add, args.Working_Dir, args.Report_Type])
+        subprocess.call(["perl", "/z/Source-Code/ArcFlash/AF-Report-full/Perl/CreateResults.pl", args.PCE_Rep, args.Working_Dir, AF_Path, args.Report_Type])
     
     
     
