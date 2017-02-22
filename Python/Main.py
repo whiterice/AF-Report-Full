@@ -6,13 +6,13 @@ import xlwt
 import datetime as DT
 from xlrd import open_workbook
 import argparse
-import CopyFilesComplete
 import subprocess
 
 sys.path.insert(0, './EDSA')
 import EDSA
 
-
+sys.path.insert(0, './CreateLabel')
+import CopyFilesComplete
 
 def main():
 
