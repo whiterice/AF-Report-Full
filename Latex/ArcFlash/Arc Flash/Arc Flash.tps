@@ -12,7 +12,7 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1562
-NormalPos.bottom=628
+NormalPos.bottom=733
 Class=LaTeXView
 Document=Arc Flash.tex
 
@@ -30,15 +30,15 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1562
-NormalPos.bottom=628
+NormalPos.bottom=733
 Class=LaTeXView
 Document=Results.tex
 
 [Frame1_View0,0]
-TopLine=47
-Cursor=3191
+TopLine=62
+Cursor=3929
 
 [SessionInfo]
 FrameCount=2
-ActiveFrame=1
+ActiveFrame=0
 

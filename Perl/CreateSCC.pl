@@ -25,7 +25,7 @@ $PCERepName = "Vince Klingenberger";
 }
 elsif (($PCERep eq "Scott")||($PCERep eq "scott"))
 {
-$PCERepName = "Scott Vermeire, B.Eng, EIT";
+$PCERepName = "Scott Vermeire, P.Eng.";
 	
 }
 else

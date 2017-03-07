@@ -48,7 +48,7 @@ $signature = "
 \\includegraphics[height=0.5in, keepaspectratio=true]{../Images/Roman_signature.jpg} \\\\
 Roman Bulla, P. Eng. \\\\Power Systems Engineer \\\\
 \\includegraphics[height=0.5in, keepaspectratio=true]{../Images/Scott_signature.jpg} \\\\
-Scott Vermeire \\\\Engineering Intern \\\\
+Scott Vermeire, P. Eng. \\\\Power Systems Engineer \\\\
 \\end{multicols}
 %\\end{comment}";
 	
