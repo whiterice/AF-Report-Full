@@ -27,16 +27,15 @@ def main():
     parser.add_argument('Working_Dir', help='working directory')
     args = parser.parse_args()
 
-    #Arc Heat Table
-    EDSA.ArcheatTable(args.Job_Num, args.Customer_Comp, args.Customer_Build, args.Customer_Add, args.Working_Dir)
+    
 
     #Copy Report Templates
     AFReportFolderName = '{!s}-{!s}-Report[{:%Y-%m-%d_%H%M%S}]'.format(args.Job_Num, "AF", DT.datetime.now())
     PDCReportFolderName = '{!s}-{!s}-Report[{:%Y-%m-%d_%H%M%S}]'.format(args.Job_Num, "PDC", DT.datetime.now())
     SCCReportFolderName = '{!s}-{!s}-Report[{:%Y-%m-%d_%H%M%S}]'.format(args.Job_Num, "SCC", DT.datetime.now())
-    AFReport_Path = '{!s}{!s}'.format(args.Working_Dir, AFReportFolderName)
-    PDCReport_Path = '{!s}{!s}'.format(args.Working_Dir, PDCReportFolderName)
-    SCCReport_Path = '{!s}{!s}'.format(args.Working_Dir, SCCReportFolderName)
+    AFReport_Path = '{!s}/{!s}'.format(args.Working_Dir, AFReportFolderName)
+    PDCReport_Path = '{!s}/{!s}'.format(args.Working_Dir, PDCReportFolderName)
+    SCCReport_Path = '{!s}/{!s}'.format(args.Working_Dir, SCCReportFolderName)
 
     if args.Report_Type == 'FULL':
         CopyFilesComplete.copyanything('z:\Source-Code\ArcFlash\AF-Report-full\Latex\ArcFlash', AFReport_Path)
@@ -79,11 +78,13 @@ def main():
         os.chdir(AF_Path)
         subprocess.call(["perl", "/z/Source-Code/ArcFlash/AF-Report-full/Perl/CreateAF.pl", args.PCE_Rep, args.Job_Num, args.Customer_Comp, args.Customer_Build, args.Customer_Add, args.Working_Dir, args.Report_Type])
         subprocess.call(["perl", "/z/Source-Code/ArcFlash/AF-Report-full/Perl/CreateResults.pl", args.PCE_Rep, args.Working_Dir, AF_Path, args.Report_Type])
-    
-    
-    
 
-    
+    if (args.Report_Type == 'FULL') or (args.Report_Type == 'AF'):
+        #Arc Heat Table
+        EDSA.ArcheatTable(args.Job_Num, args.Customer_Comp, args.Customer_Build, args.Customer_Add, args.Working_Dir, AFReport_Path)   
+    else:
+        pass
+        
     os.chdir(args.Working_Dir)
 
 
