@@ -25,10 +25,12 @@ def main():
     parser.add_argument('Customer_Build', help='Location',)
     parser.add_argument('Customer_Add', help='Address')
     parser.add_argument('Working_Dir', help='working directory')
+    parser.add_argument('Archeat_Table_Type', choices=['W', 'L'], default='W', help='Archeat Table Type')
     args = parser.parse_args()
 
     
 
+    
     #Copy Report Templates
     AFReportFolderName = '{!s}-{!s}-Report[{:%Y-%m-%d_%H%M%S}]'.format(args.Job_Num, "AF", DT.datetime.now())
     PDCReportFolderName = '{!s}-{!s}-Report[{:%Y-%m-%d_%H%M%S}]'.format(args.Job_Num, "PDC", DT.datetime.now())
@@ -81,7 +83,7 @@ def main():
 
     if (args.Report_Type == 'FULL') or (args.Report_Type == 'AF'):
         #Arc Heat Table
-        EDSA.ArcheatTable(args.Job_Num, args.Customer_Comp, args.Customer_Build, args.Customer_Add, args.Working_Dir, AFReport_Path)   
+        EDSA.ArcheatTable(args.Job_Num, args.Customer_Comp, args.Customer_Build, args.Customer_Add, args.Working_Dir, AFReport_Path, args.Archeat_Table_Type)   
     else:
         pass
         

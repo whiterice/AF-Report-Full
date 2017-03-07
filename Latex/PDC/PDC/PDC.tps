@@ -12,12 +12,12 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1562
-NormalPos.bottom=628
+NormalPos.bottom=733
 Class=LaTeXView
 Document=PDC.tex
 
 [Frame0_View0,0]
-TopLine=0
+TopLine=67
 Cursor=0
 
 [Frame1]
@@ -30,7 +30,7 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1562
-NormalPos.bottom=628
+NormalPos.bottom=733
 Class=LaTeXView
 Document=SCCObservations.tex
 
@@ -48,7 +48,7 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1562
-NormalPos.bottom=628
+NormalPos.bottom=733
 Class=LaTeXView
 Document=SCCObjectives.tex
 
@@ -66,15 +66,15 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1562
-NormalPos.bottom=628
+NormalPos.bottom=733
 Class=LaTeXView
 Document=Results.tex
 
 [Frame3_View0,0]
-TopLine=0
+TopLine=42
 Cursor=1061
 
 [SessionInfo]
 FrameCount=4
-ActiveFrame=0
+ActiveFrame=3
 
