@@ -121,7 +121,7 @@ Tel: (519) 474-1175\\\\
   \\renewcommand{\\headrulewidth}{0pt}%
 }
 \\fancyhead[L]{ % right
-   \\includegraphics[height=0.4in]{../Images/PCEHeaderLogo.png}
+   \\includegraphics[height=0.4in]{../Images/BackSignLogo.jpg}
 }
 
 \\begin{document}
@@ -140,7 +140,7 @@ Tel: (519) 474-1175\\\\
 \\include{Objectives}
 \\include{Procedures}
 \\include{Observations}
-\\include{Modifications}
+%\\include{Modifications}
 \\include{Bibliography}
 
 \\end{document}
