@@ -33,11 +33,11 @@ def main():
     
     #Copy Report Templates
     AFReportFolderName = '{!s}-{!s}-Report[{:%Y-%m-%d_%H%M%S}]'.format(args.Job_Num, "AF", DT.datetime.now())
-    PDCReportFolderName = '{!s}-{!s}-Report[{:%Y-%m-%d_%H%M%S}]'.format(args.Job_Num, "PDC", DT.datetime.now())
-    SCCReportFolderName = '{!s}-{!s}-Report[{:%Y-%m-%d_%H%M%S}]'.format(args.Job_Num, "SCC", DT.datetime.now())
+    PDCReportFolderName = '{!s}-{!s}-Report[{:%Y-%m-%d_%H%M%S}]'.format(args.Job_Num, "PDCwSCC", DT.datetime.now())
+
     AFReport_Path = '{!s}/{!s}'.format(args.Working_Dir, AFReportFolderName)
     PDCReport_Path = '{!s}/{!s}'.format(args.Working_Dir, PDCReportFolderName)
-    SCCReport_Path = '{!s}/{!s}'.format(args.Working_Dir, SCCReportFolderName)
+
 
     if args.Report_Type == 'FULL':
         CopyFilesComplete.copyanything('z:\Source-Code\ArcFlash\AF-Report-full\Latex\ArcFlash', AFReport_Path)
