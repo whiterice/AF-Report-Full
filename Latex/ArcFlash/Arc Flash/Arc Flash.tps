@@ -11,8 +11,8 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=922
-NormalPos.bottom=717
+NormalPos.right=1562
+NormalPos.bottom=733
 Class=LaTeXView
 Document=..\CoverPage.tex
 
@@ -29,13 +29,13 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=922
-NormalPos.bottom=717
+NormalPos.right=1562
+NormalPos.bottom=733
 Class=LaTeXView
 Document=Arc Flash.tex
 
 [Frame1_View0,0]
-TopLine=65
+TopLine=63
 Cursor=0
 
 [Frame2]
@@ -47,14 +47,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=922
-NormalPos.bottom=717
+NormalPos.right=1562
+NormalPos.bottom=733
 Class=LaTeXView
 Document=Results.tex
 
 [Frame2_View0,0]
-TopLine=0
-Cursor=87
+TopLine=18
+Cursor=3383
 
 [Frame3]
 Flags=0
@@ -65,8 +65,8 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=922
-NormalPos.bottom=717
+NormalPos.right=1562
+NormalPos.bottom=733
 Class=LaTeXView
 Document=Objectives.tex
 
@@ -83,8 +83,8 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=922
-NormalPos.bottom=717
+NormalPos.right=1562
+NormalPos.bottom=733
 Class=LaTeXView
 Document=Procedures.tex
 
@@ -101,8 +101,8 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=922
-NormalPos.bottom=717
+NormalPos.right=1562
+NormalPos.bottom=733
 Class=LaTeXView
 Document=Observations.tex
 
@@ -112,5 +112,5 @@ Cursor=287
 
 [SessionInfo]
 FrameCount=6
-ActiveFrame=1
+ActiveFrame=2
 

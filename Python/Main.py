@@ -50,18 +50,18 @@ def main():
         subprocess.call(["perl", "/z/Source-Code/ArcFlash/AF-Report-full/Perl/CreateResults.pl", args.PCE_Rep, args.Working_Dir, AF_Path, args.Report_Type])
 		
 		
-        CopyFilesComplete.copyanything('z:\Source-Code\ArcFlash\AF-Report-full\Latex\PDC', PDCReport_Path)
+        CopyFilesComplete.copyanything('z:\Source-Code\ArcFlash\AF-Report-full\Latex\PDCwSCC', PDCReport_Path)
 	print '\n', PDCReportFolderName, ' Generated', '\n'
         #Generate PDC Latex Report
-        PDC_Path = '{!s}/{!s}'.format(PDCReport_Path, "PDC")
+        PDC_Path = '{!s}/{!s}'.format(PDCReport_Path, "PDCwSCC")
         os.chdir(PDC_Path)
         subprocess.call(["perl", "/z/Source-Code/ArcFlash/AF-Report-full/Perl/CreatePDC.pl", args.PCE_Rep, args.Job_Num, args.Customer_Comp, args.Customer_Build, args.Customer_Add, args.Working_Dir, args.Report_Type])
 
     elif args.Report_Type == 'PDC':
-        CopyFilesComplete.copyanything('z:\Source-Code\ArcFlash\AF-Report-full\Latex\PDC', PDCReport_Path)
+        CopyFilesComplete.copyanything('z:\Source-Code\ArcFlash\AF-Report-full\Latex\PDCwSCC', PDCReport_Path)
 	print '\n', PDCReportFolderName, ' Generated', '\n'
         #Generate PDC Latex Report
-        PDC_Path = '{!s}/{!s}'.format(PDCReport_Path, "PDC")
+        PDC_Path = '{!s}/{!s}'.format(PDCReport_Path, "PDCwSCC")
         os.chdir(PDC_Path)
         subprocess.call(["perl", "/z/Source-Code/ArcFlash/AF-Report-full/Perl/CreatePDC.pl", args.PCE_Rep, args.Job_Num, args.Customer_Comp, args.Customer_Build, args.Customer_Add, args.Working_Dir, args.Report_Type])
 
